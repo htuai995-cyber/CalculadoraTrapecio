@@ -1,6 +1,39 @@
 /*======================*/
 /*   Home               */
 /*======================*/
+
+
+/*:root {
+    --fondo: #fff5f5;
+    --fondo-2: #ffe3e3;
+    --tarjeta: #ffffff;
+    --primario: #ff4757;
+    --primario-oscuro: #ff1e34;
+    --secundario: #ffa502;
+    --secundario-oscuro: #e58e00;
+    --acento: #ff7f50;
+    --acento-oscuro: #ff6347;
+    --texto: #2f3542;
+    --texto-suave: #747d8c;
+    --borde: #f1f2f6;
+    --linea: #dfe4ea;
+    --blanco: #ffffff;
+    --peligro: #ff4757;
+    --sombra: 0 16px 32px rgba(255, 71, 87, 0.1);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at top left, rgba(255, 71, 87, 0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 165, 2, 0.15), transparent 35%),
+        var(--fondo);
+}
+*/
+
+
 :root {
     --fondo: #f0f4f8;
     --fondo-2: #e1e8f0;
