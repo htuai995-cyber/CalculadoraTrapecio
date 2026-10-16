@@ -16,11 +16,13 @@
     --sombra: 0 18px 35px rgba(63, 61, 86, 0.14);
 }
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body{
     min-height: 100vh;
@@ -31,6 +33,7 @@ body{
         radial-gradient(circle at bottom right, rgba(189, 235, 214, 0.45), transparent 35%),
         var(--fondo);
 }
+
 
 .caja{
     display: flex;
