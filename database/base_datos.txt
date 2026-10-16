@@ -1,0 +1,33 @@
+-- Estructura actualizada para calcular Trapecios
+CREATE DATABASE IF NOT EXISTS `trapecios_db`   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `trapecios_db`;
+
+-- La tabla de usuarios 
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id_usuario` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(150) NOT NULL DEFAULT '',
+  `correo` VARCHAR(255) NOT NULL,
+  `clave` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id_usuario`),
+  UNIQUE KEY `uq_usuario_correo` (`correo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Tabla para el TRAPECIO
+CREATE TABLE IF NOT EXISTS `trapecio` (
+  `id_trapecio` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `detalle` TEXT NULL,
+  `base_mayor` DOUBLE NOT NULL,
+  `base_menor` DOUBLE NOT NULL,
+  `altura` DOUBLE NOT NULL,
+  `lado1` DOUBLE NOT NULL,
+  `lado2` DOUBLE NOT NULL,
+  `area` DOUBLE NOT NULL,
+  `perimetro` DOUBLE NOT NULL,
+  `fecha_registro` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_trapecio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Usuario inicial
+INSERT INTO `usuario` (`nombre`, `correo`, `clave`)
+SELECT 'Administrador', 'admin@cuadrado', '123'
+WHERE NOT EXISTS (SELECT 1 FROM `usuario` WHERE `correo` = 'admin@cuadrado');

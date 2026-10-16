@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Trapecio de fondo (Morado claro) -->
+  <path d="M 35 25 L 95 25 L 115 75 L 15 75 Z" fill="none" stroke="#b8a7e6" stroke-width="12" stroke-linejoin="round"/>
+  <!-- Trapecio frontal (Morado oscuro) -->
+  <path d="M 20 45 L 80 45 L 100 95 L 0 95 Z" fill="none" stroke="#826fc0" stroke-width="12" stroke-linejoin="round"/>
+</svg>
