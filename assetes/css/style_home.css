@@ -1,0 +1,576 @@
+/*======================*/
+/*   Home               */
+/*======================*/
+:root {
+    --fondo: #f0f4f8;
+    --fondo-2: #e1e8f0;
+    --tarjeta: #ffffff;
+    --primario: #0984e3;
+    --primario-oscuro: #066bb7;
+    --secundario: #00cec9;
+    --secundario-oscuro: #009d9a;
+    --acento: #74b9ff;
+    --acento-oscuro: #4a90e2;
+    --texto: #2d3436;
+    --texto-suave: #636e72;
+    --borde: #dfe6e9;
+    --linea: #b2bec3;
+    --blanco: #ffffff;
+    --peligro: #d63031;
+    --sombra: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at top left, rgba(9, 132, 227, 0.15), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(0, 206, 201, 0.15), transparent 35%),
+        var(--fondo);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*======================*/
+/* Alertas (Mensajes)   */
+/*======================*/
+.mensaje, .alert {
+    width: min(850px, 100%);
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.alert-success {
+    background: #e3fbed;
+    color: var(--secundario-oscuro);
+    border: 1px solid var(--secundario);
+}
+.alert-danger {
+    background: #ffefef;
+    color: #d63031;
+    border: 1px solid var(--peligro);
+}
+
+/*======================*/
+/* Header               */
+/*======================*/
+.headeerHome{
+    width: 100%;
+    min-height: 130px;
+    background: rgba(255, 250, 243, 0.92);
+    border-bottom: 1px solid var(--linea);
+    box-shadow: 0 10px 25px rgba(63, 61, 86, 0.08);
+}
+
+.lineaSup{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 25px;
+}
+
+.logo-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    background-color: var(--blanco);
+    box-shadow: 0 8px 18px rgba(63, 61, 86, 0.08);
+    overflow: hidden;
+}
+
+.logo img{
+    width: 76px;
+    padding: 7px;
+}
+
+.logo h1{
+    font-size: 22px;
+    margin: 0 12px 0 5px;
+    color: var(--texto);
+}
+
+.logo-links a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--texto);
+    padding: 10px 14px;
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.logo-links a:hover{
+    background-color: var(--fondo-2);
+    color: var(--primario-oscuro);
+}
+
+header .buscarHeader{
+    display: flex;
+}
+
+.buscarHeader .form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+    width: min(400px, 100%);
+    height: 64px;
+    background-color: var(--fondo-2);
+    padding: 0 12px;
+}
+
+.form1 img{
+    width: 34px;
+}
+
+.form1 input{
+    width: 280px;
+    height: 40px;
+    outline: none;
+    border-radius: 12px;
+    padding-left: 12px;
+    border: 0;
+    color: var(--texto);
+    background-color: var(--blanco);
+}
+
+.form1 input:focus{
+    box-shadow: 0 0 0 3px rgba(184, 167, 230, 0.22);
+}
+
+.lineaInf{
+    background: linear-gradient(90deg, var(--secundario), var(--acento));
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.menu li{
+    width: 280px;
+    list-style: none;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.25s ease;
+}
+
+.menu li a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--texto);
+    padding: 12px 10px;
+}
+
+.menu li:hover{
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+/*======================*/
+/* Main                 */
+/*======================*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 18px 0 35px;
+}
+
+.datos,
+.buscar,
+.tabla{
+    width: min(1100px, 90%);
+    background-color: rgba(255, 250, 243, 0.95);
+    border: 1px solid var(--borde);
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+}
+
+.datos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 12px;
+    padding: 24px 22px;
+}
+
+.datos .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.datos .titulo h1{
+    font-size: clamp(25px, 4vw, 36px);
+    color: var(--texto);
+}
+
+.datos .titulo p{
+    color: var(--texto-suave);
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.datos .form2{
+    width: min(850px, 100%);
+}
+
+.form2 .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    margin: 9px 0;
+    background-color: var(--fondo-2);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 8px 14px;
+    transition: 0.25s ease;
+}
+
+.form2 .inputs:focus-within{
+    border-color: var(--primario);
+    background-color: var(--blanco);
+    box-shadow: 0 0 0 4px rgba(184, 167, 230, 0.18);
+}
+
+.datos .form2 .inputs label{
+    width: 200px;
+    color: var(--texto);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.datos .form2 .inputs .inputHome{
+    width: 70%;
+    height: 36px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--primario);
+    color: var(--texto);
+    outline: none;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+.datos .form2 .inputs .inputHome::placeholder,
+.buscar form input::placeholder,
+.form1 input::placeholder{
+    color: var(--texto-suave);
+}
+
+/* Campos de solo lectura (Area y perimetro) */
+.datos .form2 .inputs .readonly {
+    background-color: transparent;
+    border-bottom: 1px dashed var(--texto-suave);
+    color: var(--primario-oscuro);
+    font-weight: bold;
+}
+
+.datos .botones,
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 8px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Modificado para incluir etiquetas <a> como botones */
+.botones button,
+.botones .btn-link,
+.buscar form button,
+.buscar form .btn-link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 160px;
+    height: 42px;
+    font-size: 18px;
+    color: var(--texto);
+    border: 0;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-weight: 600;
+}
+
+/* Colores de los botones */
+.botones button[onclick],
+.buscar form button[type="submit"] {
+    background-color: var(--secundario);
+}
+
+.botones .cancelar,
+.buscar form .limpiar {
+    background-color: var(--peligro);
+    color: var(--blanco);
+}
+
+.botones button[type="submit"] {
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+.botones button:hover,
+.botones .btn-link:hover,
+.buscar form button:hover,
+.buscar form .btn-link:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(63, 61, 86, 0.16);
+}
+
+/*======================*/
+/* Buscar               */
+/*======================*/
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 82px;
+    margin-top: 14px;
+    padding: 12px;
+}
+
+.buscar form{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 55px;
+    width: min(850px, 95%);
+    border-radius: 16px;
+    background-color: var(--fondo-2);
+    border: 1px solid var(--borde);
+    padding: 8px 10px;
+}
+
+.buscar form img{
+    width: 28px;
+}
+
+.buscar form button{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+.buscar form input{
+    width: 100%;
+    height: 38px;
+    border-radius: 12px;
+    outline: none;
+    border: 0;
+    font-size: 18px;
+    padding-left: 12px;
+    color: var(--texto);
+    background-color: var(--blanco);
+}
+
+.buscar form input:focus{
+    box-shadow: 0 0 0 3px rgba(184, 167, 230, 0.22);
+}
+
+/*======================*/
+/* Tabla                */
+/*======================*/
+.tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 14px;
+    padding: 24px 16px;
+    overflow-x: auto;
+}
+
+.tabla h1{
+    font-size: clamp(24px, 4vw, 32px);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Contenedor para que la tabla no se rompa en móviles */
+.tabla-responsive {
+    width: min(950px, 100%);
+    overflow-x: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(63, 61, 86, 0.08);
+}
+
+.tabla table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    white-space: nowrap; /* Evita que el texto de las celdas se parta */
+}
+
+table th,
+table td{
+    padding: 13px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--linea);
+}
+
+table th{
+    background-color: var(--primario);
+    color: var(--blanco);
+    font-size: 17px;
+}
+
+table td{
+    color: var(--texto);
+    font-size: 16px;
+}
+
+table tbody tr:nth-child(even){
+    background-color: var(--fondo-2);
+}
+
+table tbody tr:hover{
+    background-color: #fff1df;
+}
+
+/* Botones de acción en la tabla */
+.acciones {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acciones .btn-tabla {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.acciones .editar { background-color: var(--acento-oscuro); }
+.acciones .editar:hover { background-color: #c98a62; }
+
+.acciones .eliminar { background-color: var(--peligro); }
+.acciones .eliminar:hover { background-color: #d68989; }
+
+/*======================*/
+/* Responsive           */
+/*======================*/
+@media (max-width: 976px){
+    .lineaSup{
+        flex-direction: column;
+    }
+
+    .datos,
+    .buscar,
+    .tabla{
+        width: 92%;
+    }
+
+    .menu li{
+        width: 220px;
+    }
+}
+
+@media (max-width: 786px){
+    .logo-links{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .buscarHeader,
+    .buscarHeader .form1{
+        width: 100%;
+    }
+
+    .form1 input{
+        width: 100%;
+    }
+
+    .lineaInf{
+        padding: 8px 0;
+    }
+
+    .menu{
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .menu li{
+        width: 92%;
+    }
+
+    .form2 .inputs{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .datos .form2 .inputs label,
+    .datos .form2 .inputs .inputHome{
+        width: 100%;
+    }
+
+    .buscar form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buscar form button,
+    .buscar form .btn-link{
+        width: 100%;
+    }
+
+    .botones{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .botones button,
+    .botones .btn-link{
+        width: 100%;
+    }
+
+    .tabla{
+        align-items: stretch;
+    }
+}
